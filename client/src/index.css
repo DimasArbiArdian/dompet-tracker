@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #FCFBF7;
+    color: #112A2B;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Financial numbers styling */
+  .font-mono,
+  .tabular-nums {
+    font-family: 'JetBrains Mono', monospace;
+    font-feature-settings: 'tnum' on, 'zero' on;
+  }
+}
+
+/* Custom crisp scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FCFBF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #DCE7E7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #359FA0;
+}
+
+/* Tactile button active states */
+.tactile-press {
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+.tactile-press:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 0 transparent !important;
+}
